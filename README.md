@@ -31,7 +31,6 @@ Kotlin
 
 ```
 val encryptedDataStore = EncryptedDataStore(context, "my_secure_data", cipherWrapperUtil) // cipherWrapperUtil is your CipherWrapperUtil instance
-
 ```
 
 3.  **Store Encrypted Data:**
@@ -42,7 +41,6 @@ Kotlin
 // Example: Storing a User object
 val user = User("John Doe", "[email address removed]")
 encryptedDataStore.storeValue("user_data", user)
-
 ```
 
 4.  **Retrieve Encrypted Data:**
@@ -58,7 +56,6 @@ userFlow.collect { retrievedUser ->
         println("User: ${retrievedUser.name}")
     }
 }
-
 ```
 
 ## Usage Examples
@@ -69,7 +66,6 @@ Kotlin
 
 ```
 encryptedDataStore.storeValue("api_key", "your_secret_key")
-
 ```
 
 **Retrieving a String:**
@@ -78,7 +74,6 @@ Kotlin
 
 ```
 val apiKeyFlow: Flow<String?> = encryptedDataStore.readValue("api_key", String::class.java)
-
 ```
 
 **Storing a complex object:**
@@ -88,7 +83,6 @@ Kotlin
 ```
 data class User(val name: String, val email: String)
 encryptedDataStore.storeValue("user_profile", User("Alice", "example@rajatsarangal.in"))
-
 ```
 
 **Retrieving a complex object:**
@@ -97,7 +91,6 @@ Kotlin
 
 ```
 val userProfileFlow: Flow<User?> = encryptedDataStore.readValue("user_profile", User::class.java)
-
 ```
 
 ## CipherWrapperUtil
@@ -119,7 +112,6 @@ class CipherWrapperUtil @Inject constructor(context: Context) { // Example, adap
 		const val IV_SEPARATOR = "]"  
 	}
 }
-
 ```
 
 ## Customization
