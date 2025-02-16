@@ -57,6 +57,14 @@ userFlow.collect { retrievedUser ->
     }
 }
 ```
+## Results
+**Before**
+
+<img width="551" alt="beforeEncryption" src="https://github.com/user-attachments/assets/9efe5ca6-bdf6-4f68-9b3d-d24f13db596f" />
+
+**After**
+
+<img width="551" alt="Encyrpted" src="https://github.com/user-attachments/assets/99f55439-519a-434f-ad81-2aaccdb417f1" />
 
 ## Usage Examples
 
